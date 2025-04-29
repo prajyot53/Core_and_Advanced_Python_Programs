@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Events Demo with Color Change</title>
+  <style>
+    #eventBox{
+    Width:300px;
+    height:150 px;
+    border:2px solid blue;
+    margin-top: 20px;
+    text-align: center;
+      line-height: 150px;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: lightgray; 
+    
+    }
+  </style>
+</head>
+<body>
+
+<h2>Hello students How are You?</h2>
+<form>
+  <input type="text" placeholder="Click or hover below" />
+  <div id="eventBox"
+       onclick="showEvent('Clicked!', 'lightgreen')"
+       onmouseover="showEvent('Mouse Over', 'lightblue')"
+       onmouseout="showEvent('Mouse Out', 'lightgray')"
+       onmousedown="showEvent('Mouse Down', 'orange')"
+       onmouseup="showEvent('Mouse Up', 'yellow')"
+       onmousemove="showEvent('Mouse Moving', 'lightpink')">
+    Interact with me!
+  </div>
+</form>
+
+<script>
+  function showEvent(message, color) {
+    var box = document.getElementById("eventBox");
+    box.innerText = message;
+    box.style.backgroundColor = color;
+  }
+</script>
+
+</body>
+</html>
